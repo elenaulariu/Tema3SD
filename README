@@ -1,0 +1,25 @@
+	Pentru cea de-a treia tema am folosit un graf reprezentat printr-o lista
+de adiacenta.
+	Pentru simplificare am citit numele actorilor si le-am salvat intr-un
+vector, atribuindu-i fiecaruia cate un indice, pe care il vom folosi ca si nume
+al unui nod din graf. Pentru a putea construi muchiile salvam intr-un vector de
+vectori, indicii fiecarui actor care a jucat in filmul specificat.
+	Prima cerinta am rezolvat-o parcurgand in latime graful, pornind din
+fiecare nod, si numarand nodurile parcurse, adaugand la fiecare pas indicele 
+nodului intr-un vector. Dupa ce gasim cea mai mare productie, sortam indicii, 
+comparand numele actorilor, care au indicii respectivi.
+	La cea de-a doua cerinta, aflam indicii actorilor dati, si parcurgem 
+graful in latime, pornind din nodul cu indicele primului actor, marind distanta
+de fiecare data cand creste gradul. Intoarcem distanta pana la nodul cu indexul
+celui de-al doilea actor, distanta ce reprezinta gradul de inrudire. Daca cele
+doua noduri nu sunt inrudite intoarcem -1.
+	La cea de-a treia cerinta, am implementat algoritmul prezent in enuntul 
+temei, parcurgand in adancime graful pentru fiecare nod, si verificand daca 
+exista o punte intre nodul sursa, si unul dintre nodurile din lista de 
+adiacenta. Am salvat indicii intr-o matrice, pentru ca mai apoi sa ii sortam,
+initial sortam cei 2 actori din fiecare punte, continuam prin a sorta puntiile.
+	Pentru a putea parcurge graful in latime, am folosit o coada.
+	Pentru cea mai mare parte din program am folosit functiile din fisierele
+graph si queue, in fisierul movies, doar citind din fisier, afisand in acesta,
+sortand actorii pentru cerintele 1 si 3, si apeland celelalte functii.   
+	In final golim memoria si inchidem fisierele.
